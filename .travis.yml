@@ -8,6 +8,7 @@ compiler:
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq librecode-dev
+  - sudo apt-get build-dep enca
   - sudo pip install cpp-coveralls --use-mirrors
 script: 
   - ./autogen.sh --with-gcov && make && make test
